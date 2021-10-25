@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokenpo_test</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Pedra, Papel e Tesoura</h1>
+      <div id="score">
+        <!-- PLAYER ONE -->
+        <div id="playerOne">
+          <h2 id="playerOne-name">Nome Jogador 1/h2>
+          <span id="playerOne-score">0</span>
+
+          <ul id="playerOne-choice">
+            <li>
+              <a id="playerOne-choice-1" onclick="firstPlayerChoise(1)"
+                ><img src="./images/rock.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a id="playerOne-choice-2" onclick="firstPlayerChoise(2)"
+                ><img src="./images/paper.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a id="playerOne-choice-3" onclick="firstPlayerChoise(3)"
+                ><img src="./images/scissors.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- /PLAYER ONE -->
+        <div id="versus">vs</div>
+
+        <!-- PLAYER TWO -->
+        <div id="playerTwo">
+          <h2 id="playerTwo-name">Nome Jogador 2/h2>
+          <span id="playerTwo-score">0</span>
+
+          <ul id="playerTwo-choice">
+            <li>
+              <a id="playerTwo-choice-1" onclick="secondPlayerChoise(1)"
+                ><img src="./images/rock.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a id="playerTwo-choice-2" onclick="secondPlayerChoise(2)"
+                ><img src="./images/paper.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a id="playerTwo-choice-3" onclick="secondPlayerChoise(3)"
+                ><img src="./images/scissors.png" alt=""
+              /></a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- /PLAYER TWO -->
+      </div>
+
+      <div>
+        <input type="button" value="Jogar">
+      </div>
+      <div id="messages">Mensagens
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

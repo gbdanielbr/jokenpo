@@ -1,0 +1,114 @@
+/* * {
+  margin: 0;
+} */
+* {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+#score,
+#title,
+#messages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playerOne,
+#playerTwo {
+  position: relative;
+  flex-grow: 1;
+  border-radius: 0.5rem;
+  width: 12.5rem;
+  padding: 1.25rem;
+  color: white;
+  max-width: 19rem;
+}
+
+#playerOne {
+  background-color: rgb(92, 162, 209);
+}
+
+#playerTwo {
+  background-color: rgb(224, 107, 107);
+}
+
+#versus {
+  font-size: 2rem;
+  text-align: center;
+  width: 4rem;
+}
+
+#playerOne-name,
+#playerTwo-name {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+#playerOne-name {
+  text-align: left;
+}
+
+#playerTwo-name {
+  text-align: right;
+}
+
+#playerOne-score,
+#playerTwo-score {
+  position: absolute;
+  top: 0.5rem;
+  font-size: 1.8rem;
+}
+
+#playerOne-score {
+  right: 1.25rem;
+}
+
+ul#playerOne-choice,
+ul#playerTwo-choice {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+ul#playerOne-choice li,
+ul#playerTwo-choice li {
+  display: inline;
+}
+
+/* IMAGES */
+ul#playerOne-choice li a,
+ul#playerTwo-choice li a {
+  opacity: 30%;
+}
+
+ul#playerOne-choice li a:hover,
+ul#playerTwo-choice li a:hover {
+  opacity: 100%;
+}
+/* /IMAGES */
+
+ul#playerOne-choice li a img,
+ul#playerTwo-choice li a img {
+  max-width: 6rem;
+  margin-top: 1rem;
+}
+
+#messages {
+  font-size: 1.5rem;
+  padding: 1.25rem;
+}
+
+input {
+  background-color: rgb(87, 87, 87);
+  color: white;
+  height: 3.5rem;
+
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  transition: background 0.3s;
+}
