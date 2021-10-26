@@ -9,7 +9,8 @@
 
 #score,
 #title,
-#messages {
+#messages,
+#playDiv {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +87,9 @@ ul#playerTwo-choice li a {
 }
 
 ul#playerOne-choice li a:hover,
-ul#playerTwo-choice li a:hover {
+ul#playerTwo-choice li a:hover,
+ul#playerOne-choice a.selected,
+ul#playerTwo-choice a.selected {
   opacity: 100%;
 }
 /* /IMAGES */
@@ -100,15 +103,14 @@ ul#playerTwo-choice li a img {
 #messages {
   font-size: 1.5rem;
   padding: 1.25rem;
+  display: none;
 }
 
-input {
+#playButton {
   background-color: rgb(87, 87, 87);
   color: white;
-  height: 3.5rem;
-
-  align-items: center;
+  height: 3rem;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  transition: background 0.3s;
+  margin-top: 2rem;
 }

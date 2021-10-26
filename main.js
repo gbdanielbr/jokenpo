@@ -1,6 +1,7 @@
 var playerOneChoise
 var playerTwoChoise
-var winner
+var playerOneScore
+var playerTwoScore
 
 //1 == rock
 //2 == paper
@@ -11,26 +12,57 @@ var winner
 
 function firstPlayerChoise(choise) {
   playerOneChoise = choise
-  alert(choise)
-}
-function secondPlayerChoise(choise2) {
-  playerTwoChoise = choise2
-  alert(choise2)
+  document
+    .getElementById('playerOne-choice-' + playerOneChoise)
+    .classList.add('selected')
 }
 
-// if (playerOneChoise == playerTwoChoise) {
-//   winner = 0
-// } else if (playerOneChoise == 1 && playerTwoChoise == 2) {
-//   winner = 2
-// } else if (playerOneChoise == 1 && playerTwoChoise == 3) {
-//   winner = 1
-// } else if (playerOneChoise == 2 && playerTwoChoise == 1) {
-//   winner = 1
-// } else if (playerOneChoise == 2 && playerTwoChoise == 3) {
-//   winner = 2
-// } else if (playerOneChoise == 3 && playerTwoChoise == 1) {
-//   winner = 2
-// } else if (playerOneChoise == 3 && playerTwoChoise == 2) {
-//   winner = 1
-// }
-// alert(winner)
+function secondPlayerChoise(choise) {
+  playerTwoChoise = choise
+  document
+    .getElementById('playerTwo-choice-' + playerTwoChoise)
+    .classList.add('selected')
+}
+
+function play() {
+  let winner
+  if (playerOneChoise == playerTwoChoise) {
+    winner = 0
+    messages.textContent = `Empate`
+  } else if (playerOneChoise == 1 && playerTwoChoise == 2) {
+    winner = 2
+    playerTwoScore++
+    messages.textContent = `O jogador ${winner} ganhou`
+  } else if (playerOneChoise == 1 && playerTwoChoise == 3) {
+    winner = 1
+    messages.textContent = `O jogador ${winner} ganhou`
+    playerOneScore++
+  } else if (playerOneChoise == 2 && playerTwoChoise == 1) {
+    winner = 1
+    messages.textContent = `O jogador ${winner} ganhou`
+    playerOneScore++
+  } else if (playerOneChoise == 2 && playerTwoChoise == 3) {
+    winner = 2
+    messages.textContent = `O jogador ${winner} ganhou`
+    playerTwoScore++
+  } else if (playerOneChoise == 3 && playerTwoChoise == 1) {
+    winner = 2
+    messages.textContent = `O jogador ${winner} ganhou`
+    playerTwoScore++
+  } else if (playerOneChoise == 3 && playerTwoChoise == 2) {
+    winner = 1
+    messages.textContent = `O jogador ${winner} ganhou`
+    playerOneScore++
+  }
+
+  messages = document.getElementById('messages')
+  messages.style.display = 'flex'
+
+  document
+    .getElementById('playerOne-choice-' + playerOneChoise)
+    .classList.remove('selected')
+
+  document
+    .getElementById('playerTwo-choice-' + playerTwoChoise)
+    .classList.remove('selected')
+}
